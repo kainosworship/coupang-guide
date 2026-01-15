@@ -35,7 +35,7 @@
 
         .header {
             background: white;
-            padding: 1.5rem 0;
+            padding: 0.9rem 0;
             box-shadow: 0 2px 20px var(--shadow);
             position: sticky;
             top: 0;
@@ -70,7 +70,7 @@
             font-size: 2rem;
             color: var(--primary);
             letter-spacing: -0.5px;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
         }
 
         .subtitle {
@@ -79,25 +79,19 @@
             font-weight: 300;
         }
 
-        .category-btn-wrapper {
-            margin-top: 1rem;
-            display: flex;
-            justify-content: flex-start;
-            width: 100%;
-        }
-
-        .header-actions {
-            display: flex;
-            gap: 1rem;
-            align-self: flex-start;
-        }
-
         .btn-header {
             background: var(--primary);
             color: white;
             border: none;
-            padding: 0.6rem 1.5rem;
+            box-sizing: border-box;
+            padding: 0 1.5rem;
             font-size: 0.9rem;
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 44px;
+            white-space: nowrap;
             font-weight: 600;
             cursor: pointer;
             border-radius: 50px;
@@ -181,7 +175,7 @@
         }
 
         .category-section {
-            margin: 3rem 0;
+            margin: 2rem 0;
         }
 
         .category-title {
@@ -594,14 +588,6 @@
                 align-items: stretch;
             }
 
-            .header-actions {
-                align-self: flex-end;
-            }
-
-            .category-btn-wrapper {
-                justify-content: flex-start;
-            }
-
             .btn-header {
                 padding: 0.5rem 1rem;
                 font-size: 0.85rem;
@@ -619,6 +605,29 @@
             .admin-content {
                 padding: 2rem;
             }
+
+            .header {
+                padding: 0.75rem 0;
+            }
+
+            .header-buttons {
+                margin-top: 0.75rem;
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                flex-wrap: wrap;
+            }
+
+            .btn-header {
+                height: 42px;
+                padding: 0.55rem 1.15rem;
+                font-size: 0.85rem;
+            }
+
+            .category-section {
+                margin: 1.5rem 0;
+            }
+
         }
     </style>
 </head>
@@ -630,13 +639,11 @@
                     <div class="title-section">
                         <h1>쿠팡 꿀템 가이드</h1>
                         <p class="subtitle">검증된 인기템만 모았습니다. 실제 구매 후기와 평점으로 검증된 제품들을 만나보세요.</p>
-                        <div class="category-btn-wrapper">
+                        <div class="header-buttons">
                             <button class="btn-header btn-category" onclick="toggleCategory()">📂 카테고리</button>
+                            <button class="btn-header btn-admin" onclick="toggleAdmin()">관리자</button>
                         </div>
                     </div>
-                </div>
-                <div class="header-actions">
-                    <button class="btn-header btn-admin" onclick="toggleAdmin()">관리자</button>
                 </div>
             </div>
             <div class="category-dropdown" id="categoryDropdown">
