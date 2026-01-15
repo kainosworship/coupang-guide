@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>쿠팡 꿀템 가이드</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Sans+KR:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c2c2c;
+            --secondary: #f5f5f0;
+            --accent: #d4a574;
+            --text: #1a1a1a;
+            --text-light: #6b6b6b;
+            --border: #e0e0e0;
+            --shadow: rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: var(--secondary);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 20px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .title-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+            margin-bottom: 0.3rem;
+        }
+
+        .subtitle {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 300;
+        }
+
+        .category-btn-wrapper {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+            align-self: flex-start;
+        }
+
+        .btn-header {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .btn-header:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .btn-admin {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-admin:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-category {
+            background: var(--primary);
+            color: white;
+            border: 2px solid var(--primary);
+        }
+
+        .btn-category:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .category-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px var(--shadow);
+            padding: 1.5rem;
+            margin-top: 0.5rem;
+            display: none;
+            min-width: 250px;
+            z-index: 200;
+        }
+
+        .category-dropdown.active {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .category-item {
+            padding: 0.75rem 1rem;
+            margin: 0.25rem 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .category-item:hover {
+            background: var(--secondary);
+        }
+
+        .category-item.active {
+            background: var(--accent);
+            color: white;
+        }
+
+        .category-section {
+            margin: 3rem 0;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 4px solid var(--accent);
+        }
+
+        .slider-container {
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .slider-track {
+            display: flex;
+            gap: 1.5rem;
+            animation: scroll 30s linear infinite;
+            width: max-content;
+        }
+
+        .slider-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px var(--shadow);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            width: 280px;
+            flex-shrink: 0;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 1.25rem;
+        }
+
+        .product-category-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            min-height: 2.8rem;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .filtered-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .filtered-grid .product-card {
+            width: 100%;
+        }
+
+        .admin-panel {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        .admin-panel.active {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .admin-content {
+            background: white;
+            padding: 3rem;
+            max-width: 600px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px var(--shadow);
+            margin: 2rem 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        input[type="url"],
+        input[type="password"],
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Noto Sans KR', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent);
+        }
+
+        .btn-secondary {
+            background: var(--border);
+            color: var(--text);
+        }
+
+        .btn-secondary:hover {
+            background: #d0d0d0;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c82333;
+        }
+
+        .btn-info {
+            background: #17a2b8;
+            color: white;
+        }
+
+        .btn-info:hover {
+            background: #138496;
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #218838;
+        }
+
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .error-message.active {
+            display: block;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .success-message.active {
+            display: block;
+        }
+
+        .help-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--accent);
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-light);
+        }
+
+        .help-box strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .help-box ol {
+            margin: 0.5rem 0 0 1.2rem;
+            padding: 0;
+        }
+
+        .help-box li {
+            margin: 0.3rem 0;
+        }
+
+        .help-box code {
+            background: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--accent);
+        }
+
+        .url-example {
+            margin-top: 0.75rem;
+            padding: 0.75rem;
+            background: #fff3cd;
+            border-radius: 6px;
+            border-left: 3px solid #ffc107;
+        }
+
+        .url-example strong {
+            color: #856404;
+            font-size: 0.9rem;
+        }
+
+        .url-example code {
+            background: white;
+            color: #28a745;
+            font-weight: 600;
+        }
+
+        .url-warning {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: #856404;
+        }
+
+        .delete-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+        }
+
+        .delete-item-image {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .delete-item-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .delete-item-name {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .delete-item-price {
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        .delete-item-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: 'Noto Sans KR', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .delete-item-btn:hover {
+            background: #c82333;
+            transform: scale(1.05);
+        }
+
+        .menu-grid {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .menu-grid .btn {
+            padding: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .empty-category {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-light);
+        }
+
+        .save-notice {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .save-notice strong {
+            color: #0c5460;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .subtitle {
+                font-size: 0.8rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .header-actions {
+                align-self: flex-end;
+            }
+
+            .category-btn-wrapper {
+                justify-content: flex-start;
+            }
+
+            .btn-header {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .category-dropdown {
+                right: 1rem;
+                left: 1rem;
+            }
+
+            .product-card {
+                width: 240px;
+            }
+
+            .admin-content {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <div class="title-section">
+                        <h1>쿠팡 꿀템 가이드</h1>
+                        <p class="subtitle">검증된 인기템만 모았습니다. 실제 구매 후기와 평점으로 검증된 제품들을 만나보세요.</p>
+                        <div class="category-btn-wrapper">
+                            <button class="btn-header btn-category" onclick="toggleCategory()">📂 카테고리</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-header btn-admin" onclick="toggleAdmin()">관리자</button>
+                </div>
+            </div>
+            <div class="category-dropdown" id="categoryDropdown">
+                <div class="category-item active" onclick="selectCategory('all')">🏠 전체보기</div>
+                <div class="category-item" onclick="selectCategory('패션/뷰티/잡화')">👗 패션/뷰티/잡화</div>
+                <div class="category-item" onclick="selectCategory('식품')">🍖 식품</div>
+                <div class="category-item" onclick="selectCategory('주방용품')">🍳 주방용품</div>
+                <div class="category-item" onclick="selectCategory('생활용품')">🧹 생활용품</div>
+                <div class="category-item" onclick="selectCategory('홈인테리어')">🏡 홈인테리어</div>
+                <div class="category-item" onclick="selectCategory('가전디지털')">📱 가전디지털</div>
+                <div class="category-item" onclick="selectCategory('스포츠/레저')">⚽ 스포츠/레저</div>
+                <div class="category-item" onclick="selectCategory('헬스/건강식품')">💪 헬스/건강식품</div>
+                <div class="category-item" onclick="selectCategory('반려동물용품')">🐾 반려동물용품</div>
+                <div class="category-item" onclick="selectCategory('자동차용품')">🚗 자동차용품</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" id="mainContent"></div>
+
+    <div class="admin-panel" id="adminPanel">
+        <div class="admin-content">
+            <div id="loginScreen">
+                <h2 style="margin-bottom: 2rem; font-family: 'Playfair Display', serif;">관리자 로그인</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="password">비밀번호</label>
+                        <input type="password" id="password" placeholder="관리자 비밀번호를 입력하세요" required>
+                    </div>
+                    <div class="error-message" id="loginError"></div>
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-primary">로그인</button>
+                        <button type="button" class="btn btn-secondary" onclick="toggleAdmin()">닫기</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="adminMenu" style="display: none;">
+                <h2 style="margin-bottom: 2rem; font-family: 'Playfair Display', serif;">관리자 메뉴</h2>
+                
+                <div class="save-notice">
+                    <strong>💾 중요!</strong> 제품을 추가/수정/삭제한 후 반드시 <strong>"데이터 저장"</strong> 버튼을 눌러주세요!
+                </div>
+
+                <div class="menu-grid">
+                    <button class="btn btn-primary" onclick="showAddProduct()">➕ 신규 제품 입력</button>
+                    <button class="btn btn-info" onclick="showEditProduct()">✏️ 기존 제품 수정</button>
+                    <button class="btn btn-danger" onclick="showDeleteProduct()">🗑️ 기존 제품 삭제</button>
+                    <button class="btn btn-success" onclick="downloadProductsJSON()">💾 데이터 저장 (JSON 다운로드)</button>
+                </div>
+                <button class="btn btn-secondary" onclick="logout()">로그아웃</button>
+            </div>
+
+            <div id="addProductScreen" style="display: none;">
+                <h2 style="margin-bottom: 1rem; font-family: 'Playfair Display', serif;">신규 제품 입력</h2>
+                
+                <div class="help-box">
+                    <strong>📌 이미지 URL 얻는 방법</strong>
+                    <ol>
+                        <li>쿠팡 제품 이미지를 드래그하여 바탕화면에 저장</li>
+                        <li><code>imgur.com</code> 접속 → "New post" 클릭</li>
+                        <li>이미지 업로드 완료 후</li>
+                        <li>업로드된 이미지를 <strong>우클릭</strong> → <strong>"Copy image address"</strong> 선택</li>
+                        <li>복사한 URL을 아래에 붙여넣기</li>
+                    </ol>
+                    <div class="url-example">
+                        <strong>✅ 올바른 형태:</strong><br>
+                        <code>https://i.imgur.com/abc123.jpg</code>
+                        <div class="url-warning">
+                            ⚠️ <code>imgur.com/a/...</code>는 작동 안 됨!
+                        </div>
+                    </div>
+                </div>
+
+                <form id="addProductForm">
+                    <div class="form-group">
+                        <label for="productCategory">카테고리</label>
+                        <select id="productCategory" required>
+                            <option value="">카테고리를 선택하세요</option>
+                            <option value="패션/뷰티/잡화">👗 패션/뷰티/잡화</option>
+                            <option value="식품">🍖 식품</option>
+                            <option value="주방용품">🍳 주방용품</option>
+                            <option value="생활용품">🧹 생활용품</option>
+                            <option value="홈인테리어">🏡 홈인테리어</option>
+                            <option value="가전디지털">📱 가전디지털</option>
+                            <option value="스포츠/레저">⚽ 스포츠/레저</option>
+                            <option value="헬스/건강식품">💪 헬스/건강식품</option>
+                            <option value="반려동물용품">🐾 반려동물용품</option>
+                            <option value="자동차용품">🚗 자동차용품</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="productUrl">제품 URL (쿠팡 파트너스 링크)</label>
+                        <input type="url" id="productUrl" placeholder="https://www.coupang.com/vp/products/..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productName">제품명</label>
+                        <input type="text" id="productName" placeholder="제품명을 입력하세요" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productImage">제품 이미지 URL</label>
+                        <input type="url" id="productImage" placeholder="이미지 URL을 입력하세요" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">가격</label>
+                        <input type="text" id="productPrice" placeholder="예: 29,900원" required>
+                    </div>
+                    <div class="error-message" id="addError"></div>
+                    <div class="success-message" id="addSuccess"></div>
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-primary">제품 추가</button>
+                        <button type="button" class="btn btn-secondary" onclick="backToMenu()">메뉴로</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="editProductScreen" style="display: none;">
+                <h2 style="margin-bottom: 2rem; font-family: 'Playfair Display', serif;">기존 제품 수정</h2>
+                <div id="editProductList"></div>
+                <button class="btn btn-secondary" onclick="backToMenu()" style="width: 100%; margin-top: 1rem;">메뉴로</button>
+            </div>
+
+            <div id="editProductForm" style="display: none;">
+                <h2 style="margin-bottom: 1rem; font-family: 'Playfair Display', serif;">제품 정보 수정</h2>
+                
+                <div class="help-box">
+                    <strong>📌 이미지 URL 얻는 방법</strong>
+                    <ol>
+                        <li>쿠팡 제품 이미지를 드래그하여 바탕화면에 저장</li>
+                        <li><code>imgur.com</code> 접속 → "New post" 클릭</li>
+                        <li>이미지 업로드 완료 후</li>
+                        <li>업로드된 이미지를 <strong>우클릭</strong> → <strong>"Copy image address"</strong> 선택</li>
+                        <li>복사한 URL을 아래에 붙여넣기</li>
+                    </ol>
+                    <div class="url-example">
+                        <strong>✅ 올바른 형태:</strong><br>
+                        <code>https://i.imgur.com/abc123.jpg</code>
+                        <div class="url-warning">
+                            ⚠️ <code>imgur.com/a/...</code>는 작동 안 됨!
+                        </div>
+                    </div>
+                </div>
+
+                <form id="updateProductForm">
+                    <input type="hidden" id="editProductIndex">
+                    <div class="form-group">
+                        <label for="editProductCategory">카테고리</label>
+                        <select id="editProductCategory" required>
+                            <option value="">카테고리를 선택하세요</option>
+                            <option value="패션/뷰티/잡화">👗 패션/뷰티/잡화</option>
+                            <option value="식품">🍖 식품</option>
+                            <option value="주방용품">🍳 주방용품</option>
+                            <option value="생활용품">🧹 생활용품</option>
+                            <option value="홈인테리어">🏡 홈인테리어</option>
+                            <option value="가전디지털">📱 가전디지털</option>
+                            <option value="스포츠/레저">⚽ 스포츠/레저</option>
+                            <option value="헬스/건강식품">💪 헬스/건강식품</option>
+                            <option value="반려동물용품">🐾 반려동물용품</option>
+                            <option value="자동차용품">🚗 자동차용품</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="editProductUrl">제품 URL</label>
+                        <input type="url" id="editProductUrl" placeholder="https://www.coupang.com/vp/products/..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editProductName">제품명</label>
+                        <input type="text" id="editProductName" placeholder="제품명을 입력하세요" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editProductImage">제품 이미지 URL</label>
+                        <input type="url" id="editProductImage" placeholder="이미지 URL을 입력하세요" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editProductPrice">가격</label>
+                        <input type="text" id="editProductPrice" placeholder="예: 29,900원" required>
+                    </div>
+                    <div class="error-message" id="editError"></div>
+                    <div class="success-message" id="editSuccess"></div>
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-primary">수정 완료</button>
+                        <button type="button" class="btn btn-secondary" onclick="cancelEdit()">취소</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="deleteProductScreen" style="display: none;">
+                <h2 style="margin-bottom: 2rem; font-family: 'Playfair Display', serif;">기존 제품 삭제</h2>
+                <div id="deleteProductList"></div>
+                <button class="btn btn-secondary" onclick="backToMenu()" style="width: 100%; margin-top: 1rem;">메뉴로</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        console.log('=== 쿠팡 꿀템 가이드 (서버 데이터 버전) ===');
+        
+        const ADMIN_PASSWORD = 'worship2*';
+        let isLoggedIn = false;
+        let currentFilter = 'all';
+        let productsData = [];
+
+        const CATEGORIES = [
+            '패션/뷰티/잡화', '식품', '주방용품', '생활용품', '홈인테리어', '가전디지털',
+            '스포츠/레저', '헬스/건강식품', '반려동물용품', '자동차용품'
+        ];
+
+        const CATEGORY_ICONS = {
+            '패션/뷰티/잡화': '👗',
+            '식품': '🍖', '주방용품': '🍳', '생활용품': '🧹', '홈인테리어': '🏡',
+            '가전디지털': '📱', '스포츠/레저': '⚽', '헬스/건강식품': '💪',
+            '반려동물용품': '🐾', '자동차용품': '🚗'
+        };
+
+        // 데이터 로드 (products.json 또는 localStorage에서)
+        async function loadProducts() {
+            try {
+                const response = await fetch('products.json?v=' + Date.now());
+                if (response.ok) {
+                    productsData = await response.json();
+                    console.log('products.json에서 로드:', productsData.length, '개');
+                } else {
+                    throw new Error('products.json 없음');
+                }
+            } catch (error) {
+                console.log('products.json 로드 실패, localStorage 확인');
+                const localData = localStorage.getItem('products');
+                if (localData) {
+                    productsData = JSON.parse(localData);
+                    console.log('localStorage에서 로드:', productsData.length, '개');
+                } else {
+                    productsData = [];
+                    console.log('제품 데이터 없음');
+                }
+            }
+            return productsData;
+        }
+
+        // 데이터 저장 (localStorage에만)
+        function saveProducts(products) {
+            productsData = products;
+            localStorage.setItem('products', JSON.stringify(products));
+            console.log('localStorage에 저장:', products.length, '개');
+        }
+
+        // JSON 파일 다운로드
+        function downloadProductsJSON() {
+            const dataStr = JSON.stringify(productsData, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'products.json';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+            
+            alert('✅ products.json 파일이 다운로드되었습니다!\n\n다음 단계:\n1. 다운로드된 products.json 파일 확인\n2. Netlify에 index.html과 함께 업로드\n3. 모든 방문자가 업데이트된 제품 목록을 볼 수 있습니다!');
+        }
+
+        function getProductsByCategory(category) {
+            return productsData.filter(p => p.category === category);
+        }
+
+        function renderAllCategories() {
+            const mainContent = document.getElementById('mainContent');
+            
+            if (productsData.length === 0) {
+                mainContent.innerHTML = `
+                    <div class="empty-category">
+                        <h2>📦 등록된 제품이 없습니다</h2>
+                        <p style="margin-top: 1rem; color: #999;">관리자 로그인 후 제품을 추가해주세요.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            mainContent.innerHTML = '';
+
+            CATEGORIES.forEach(category => {
+                const products = getProductsByCategory(category);
+                if (products.length === 0) return;
+
+                const section = document.createElement('div');
+                section.className = 'category-section';
+                section.innerHTML = `
+                    <h2 class="category-title">${CATEGORY_ICONS[category]} ${category}</h2>
+                    <div class="slider-container">
+                        <div class="slider-track">
+                            ${renderProductsForSlider(products)}
+                            ${renderProductsForSlider(products)}
+                        </div>
+                    </div>
+                `;
+                mainContent.appendChild(section);
+            });
+        }
+
+        function renderProductsForSlider(products) {
+            return products.map(p => `
+                <div class="product-card" onclick="openProduct('${p.url}')">
+                    <img src="${p.image}" alt="${p.name}" class="product-image" onerror="this.onerror=null; this.src='https://placehold.co/280x280/e0e0e0/666666?text=No+Image';">
+                    <div class="product-info">
+                        <span class="product-category-badge">${p.category}</span>
+                        <div class="product-name">${p.name}</div>
+                        <div class="product-price">${p.price}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderFilteredView(category) {
+            const mainContent = document.getElementById('mainContent');
+            const products = getProductsByCategory(category);
+
+            if (products.length === 0) {
+                mainContent.innerHTML = `
+                    <div class="empty-category">
+                        <h2>${CATEGORY_ICONS[category]} ${category}</h2>
+                        <p>아직 등록된 제품이 없습니다.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            mainContent.innerHTML = `
+                <div class="category-section">
+                    <h2 class="category-title">${CATEGORY_ICONS[category]} ${category}</h2>
+                    <div class="filtered-grid">
+                        ${products.map(p => `
+                            <div class="product-card" onclick="openProduct('${p.url}')">
+                                <img src="${p.image}" alt="${p.name}" class="product-image" onerror="this.onerror=null; this.src='https://placehold.co/280x280/e0e0e0/666666?text=No+Image';">
+                                <div class="product-info">
+                                    <span class="product-category-badge">${p.category}</span>
+                                    <div class="product-name">${p.name}</div>
+                                    <div class="product-price">${p.price}</div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function selectCategory(category) {
+            currentFilter = category;
+            document.querySelectorAll('.category-item').forEach(i => i.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById('categoryDropdown').classList.remove('active');
+            category === 'all' ? renderAllCategories() : renderFilteredView(category);
+        }
+
+        function toggleCategory() {
+            document.getElementById('categoryDropdown').classList.toggle('active');
+        }
+
+        document.addEventListener('click', (e) => {
+            const dropdown = document.getElementById('categoryDropdown');
+            const btn = e.target.closest('.btn-category');
+            if (dropdown && !dropdown.contains(e.target) && !btn) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('loginError');
+            
+            if (password !== ADMIN_PASSWORD) {
+                errorMessage.textContent = '비밀번호가 올바르지 않습니다.';
+                errorMessage.classList.add('active');
+                return;
+            }
+
+            isLoggedIn = true;
+            document.getElementById('loginScreen').style.display = 'none';
+            document.getElementById('adminMenu').style.display = 'block';
+            errorMessage.classList.remove('active');
+        });
+
+        function showAddProduct() {
+            document.getElementById('adminMenu').style.display = 'none';
+            document.getElementById('addProductScreen').style.display = 'block';
+        }
+
+        function showEditProduct() {
+            document.getElementById('adminMenu').style.display = 'none';
+            document.getElementById('editProductScreen').style.display = 'block';
+            renderEditList();
+        }
+
+        function showDeleteProduct() {
+            document.getElementById('adminMenu').style.display = 'none';
+            document.getElementById('deleteProductScreen').style.display = 'block';
+            renderDeleteList();
+        }
+
+        function renderEditList() {
+            const list = document.getElementById('editProductList');
+            
+            if (productsData.length === 0) {
+                list.innerHTML = '<div style="text-align: center; padding: 2rem; color: #999;">수정할 제품이 없습니다.</div>';
+                return;
+            }
+
+            list.innerHTML = productsData.map((p, i) => `
+                <div class="delete-item">
+                    <img src="${p.image}" alt="${p.name}" class="delete-item-image" onerror="this.onerror=null; this.src='https://placehold.co/60x60/e0e0e0/666666?text=No+Image';">
+                    <div class="delete-item-info">
+                        <div style="font-size: 0.75rem; color: #17a2b8; margin-bottom: 0.25rem;">${p.category}</div>
+                        <div class="delete-item-name">${p.name}</div>
+                        <div class="delete-item-price">${p.price}</div>
+                    </div>
+                    <button class="delete-item-btn" onclick="editProductByIndex(${i})" style="background: #17a2b8;">수정</button>
+                </div>
+            `).join('');
+        }
+
+        function editProductByIndex(index) {
+            const p = productsData[index];
+
+            document.getElementById('editProductIndex').value = index;
+            document.getElementById('editProductCategory').value = p.category;
+            document.getElementById('editProductUrl').value = p.url;
+            document.getElementById('editProductName').value = p.name;
+            document.getElementById('editProductImage').value = p.image;
+            document.getElementById('editProductPrice').value = p.price;
+
+            document.getElementById('editProductScreen').style.display = 'none';
+            document.getElementById('editProductForm').style.display = 'block';
+        }
+
+        function cancelEdit() {
+            document.getElementById('editProductForm').style.display = 'none';
+            document.getElementById('editProductScreen').style.display = 'block';
+            document.getElementById('updateProductForm').reset();
+            document.getElementById('editError').classList.remove('active');
+            document.getElementById('editSuccess').classList.remove('active');
+        }
+
+        document.getElementById('updateProductForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const index = parseInt(document.getElementById('editProductIndex').value);
+            productsData[index] = {
+                category: document.getElementById('editProductCategory').value,
+                name: document.getElementById('editProductName').value.trim(),
+                image: document.getElementById('editProductImage').value.trim(),
+                price: document.getElementById('editProductPrice').value.trim(),
+                url: document.getElementById('editProductUrl').value.trim()
+            };
+            
+            saveProducts(productsData);
+            currentFilter === 'all' ? renderAllCategories() : renderFilteredView(currentFilter);
+            
+            const successMsg = document.getElementById('editSuccess');
+            successMsg.textContent = '✅ 제품이 수정되었습니다! "데이터 저장" 버튼을 눌러 JSON 파일을 다운로드하세요.';
+            successMsg.classList.add('active');
+            
+            setTimeout(() => {
+                document.getElementById('editProductForm').style.display = 'none';
+                document.getElementById('adminMenu').style.display = 'block';
+                document.getElementById('updateProductForm').reset();
+                successMsg.classList.remove('active');
+            }, 3000);
+        });
+
+        function renderDeleteList() {
+            const list = document.getElementById('deleteProductList');
+            
+            if (productsData.length === 0) {
+                list.innerHTML = '<div style="text-align: center; padding: 2rem; color: #999;">삭제할 제품이 없습니다.</div>';
+                return;
+            }
+
+            list.innerHTML = productsData.map((p, i) => `
+                <div class="delete-item">
+                    <img src="${p.image}" alt="${p.name}" class="delete-item-image" onerror="this.onerror=null; this.src='https://placehold.co/60x60/e0e0e0/666666?text=No+Image';">
+                    <div class="delete-item-info">
+                        <div style="font-size: 0.75rem; color: #d4a574; margin-bottom: 0.25rem;">${p.category}</div>
+                        <div class="delete-item-name">${p.name}</div>
+                        <div class="delete-item-price">${p.price}</div>
+                    </div>
+                    <button class="delete-item-btn" onclick="deleteProductByIndex(${i})">삭제</button>
+                </div>
+            `).join('');
+        }
+
+        function deleteProductByIndex(index) {
+            if (confirm('이 제품을 삭제하시겠습니까?')) {
+                productsData.splice(index, 1);
+                saveProducts(productsData);
+                renderDeleteList();
+                currentFilter === 'all' ? renderAllCategories() : renderFilteredView(currentFilter);
+                alert('✅ 제품이 삭제되었습니다! "데이터 저장" 버튼을 눌러 JSON 파일을 다운로드하세요.');
+            }
+        }
+
+        function backToMenu() {
+            ['addProductScreen', 'deleteProductScreen', 'editProductScreen', 'editProductForm'].forEach(id => {
+                document.getElementById(id).style.display = 'none';
+            });
+            document.getElementById('adminMenu').style.display = 'block';
+            document.getElementById('addProductForm').reset();
+            document.getElementById('addError').classList.remove('active');
+            document.getElementById('addSuccess').classList.remove('active');
+        }
+
+        function logout() {
+            isLoggedIn = false;
+            document.getElementById('adminMenu').style.display = 'none';
+            document.getElementById('loginScreen').style.display = 'block';
+            document.getElementById('password').value = '';
+            toggleAdmin();
+        }
+
+        document.getElementById('addProductForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            productsData.unshift({
+                category: document.getElementById('productCategory').value,
+                name: document.getElementById('productName').value.trim(),
+                image: document.getElementById('productImage').value.trim(),
+                price: document.getElementById('productPrice').value.trim(),
+                url: document.getElementById('productUrl').value.trim()
+            });
+            
+            saveProducts(productsData);
+            document.getElementById('addProductForm').reset();
+            currentFilter === 'all' ? renderAllCategories() : renderFilteredView(currentFilter);
+            
+            const successMsg = document.getElementById('addSuccess');
+            successMsg.textContent = '✅ 제품이 추가되었습니다! "데이터 저장" 버튼을 눌러 JSON 파일을 다운로드하세요.';
+            successMsg.classList.add('active');
+            
+            setTimeout(() => {
+                backToMenu();
+            }, 3000);
+        });
+
+        function openProduct(url) {
+            window.open(url, '_blank');
+        }
+
+        function toggleAdmin() {
+            const panel = document.getElementById('adminPanel');
+            panel.classList.toggle('active');
+            
+            if (!panel.classList.contains('active')) {
+                isLoggedIn = false;
+                ['loginScreen', 'adminMenu', 'addProductScreen', 'deleteProductScreen', 'editProductScreen', 'editProductForm'].forEach((id, idx) => {
+                    document.getElementById(id).style.display = idx === 0 ? 'block' : 'none';
+                });
+                document.getElementById('password').value = '';
+                document.getElementById('loginError').classList.remove('active');
+            }
+        }
+
+        // 초기화
+        loadProducts().then(() => {
+            renderAllCategories();
+        });
+    </script>
+</body>
+</html>
