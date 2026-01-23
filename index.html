@@ -684,7 +684,34 @@
     
         .affiliate-disclosure{display:block!important;visibility:visible!important;opacity:1!important;}
 
-    </style>
+    
+        /* ===== 🎁 선물세트 상단 슬라이더 ===== */
+        .giftset-featured { margin-top: 18px; }
+        .featured-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .featured-title { cursor: pointer; }
+        .btn-view-giftset {
+            background: #111;
+            color: #fff;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 999px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+        .btn-view-giftset:hover { opacity: 0.9; }
+        @media (max-width: 768px) {
+            .giftset-featured { margin-top: 12px; }
+            .btn-view-giftset { padding: 9px 12px; font-size: 13px; }
+        }
+
+</style>
 </head>
 <body>
     <div class="affiliate-disclosure">이 게시물은 쿠팡 파트너스 활동의 일환으로,<br>이에 따른 일정액의 수수료를 제공 받습니다</div>
@@ -704,6 +731,7 @@
             </div>
             <div class="category-dropdown" id="categoryDropdown">
                 <div class="category-item active" onclick="selectCategory('all')">🏠 전체보기</div>
+                <div class="category-item" onclick="selectCategory('선물세트')">🎁 선물세트</div>
                 <div class="category-item" onclick="selectCategory('패션/뷰티/잡화')">👗 패션/뷰티/잡화</div>
                 <div class="category-item" onclick="selectCategory('식품')">🍖 식품</div>
                 <div class="category-item" onclick="selectCategory('주방용품')">🍳 주방용품</div>
@@ -903,11 +931,12 @@
         let productsData = [];
 
         const CATEGORIES = [
-            '패션/뷰티/잡화', '식품', '주방용품', '생활용품', '홈인테리어', '가전디지털',
+            '선물세트', '패션/뷰티/잡화', '식품', '주방용품', '생활용품', '홈인테리어', '가전디지털',
             '스포츠/레저', '헬스/건강식품', '반려동물용품', '자동차용품'
         ];
 
         const CATEGORY_ICONS = {
+            '선물세트': '🎁',
             '패션/뷰티/잡화': '👗',
             '식품': '🍖', '주방용품': '🍳', '생활용품': '🧹', '홈인테리어': '🏡',
             '가전디지털': '📱', '스포츠/레저': '⚽', '헬스/건강식품': '💪',
@@ -979,8 +1008,30 @@
             }
             
             mainContent.innerHTML = '';
+            // 🎁 선물세트 상단 슬라이더 (제품이 있을 때만 표시)
+            const giftProducts = getProductsByCategory('선물세트');
+            if (giftProducts.length > 0) {
+                const featured = document.createElement('div');
+                featured.className = 'category-section giftset-featured';
+                featured.innerHTML = `
+                    <div class="featured-header">
+                        <h2 class="category-title featured-title" onclick="selectCategoryByName('선물세트')">🎁 선물세트</h2>
+                        <button class="btn-view-giftset" onclick="selectCategoryByName('선물세트')">선물세트만 보기</button>
+                    </div>
+                    <div class="slider-container">
+                        <div class="slider-track">
+                            ${renderProductsForSlider(giftProducts)}
+                            ${renderProductsForSlider(giftProducts)}
+                        </div>
+                    </div>
+                `;
+                mainContent.appendChild(featured);
+            }
+
+
 
             CATEGORIES.forEach(category => {
+                if (category === '선물세트') return;
                 const products = getProductsByCategory(category);
                 if (products.length === 0) return;
 
@@ -1045,7 +1096,28 @@
             `;
         }
 
-        function selectCategory(category) {
+        
+        function selectCategoryByName(category) {
+            currentFilter = category;
+
+            // 활성 상태 갱신 (onclick에 category가 포함된 항목을 활성화)
+            document.querySelectorAll('.category-item').forEach(i => {
+                i.classList.remove('active');
+                const oc = (i.getAttribute('onclick') || '');
+                if (category === 'all' && oc.includes("selectCategory('all')")) i.classList.add('active');
+                if (category !== 'all' && oc.includes(`selectCategory('${category}')`)) i.classList.add('active');
+            });
+
+            const dropdown = document.getElementById('categoryDropdown');
+            if (dropdown) dropdown.classList.remove('active');
+
+            category === 'all' ? renderAllCategories() : renderFilteredView(category);
+
+            // 상단으로 부드럽게 이동 (모바일에서 체감 개선)
+            try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch(e) { window.scrollTo(0,0); }
+        }
+
+function selectCategory(category) {
             currentFilter = category;
             document.querySelectorAll('.category-item').forEach(i => i.classList.remove('active'));
             event.target.classList.add('active');
