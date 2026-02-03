@@ -1,5 +1,271 @@
 [
   {
+    "category": "식품",
+    "name": "[광고]✅김규흔한과 명인 꿀약과, 80g, 4개",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EA%B9%80%EA%B7%9C%ED%9D%94%ED%95%9C%EA%B3%BC%20%EA%BF%80%EC%95%BD%EA%B3%BC_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "12,800원",
+    "url": "https://link.coupang.com/a/dB07wD"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅조은나래 도라지정과 300 선물세트 -, 1박스, 300g",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EC%A1%B0%EC%9D%80%EB%82%98%EB%A0%88%20%EB%8F%84%EB%9D%BC%EC%A7%80%20%EC%A0%95%EA%B3%BC_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "30,300원",
+    "url": "https://link.coupang.com/a/dB04qD"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅[명품과일 모음전] 프리미엄 혼합과일 선물세트, 1세트, 3.5kg(01)",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EB%AA%85%ED%92%88%EA%B3%BC%EC%9D%BC%20%EB%AA%A8%EC%9D%8C%EC%A0%84_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "45,520원",
+    "url": "https://link.coupang.com/a/dB01yB"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅[설날 과일 특가] 15brix 이상 프리미엄 고당도 제주 레드향 선물세트, 1박스, 3kg (8~13과) + 부직포 포장",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EC%84%A4%EB%82%A0%EA%B3%BC%EC%9D%BC%ED%8A%B9%EA%B0%80%20%EC%A0%9C%EC%A3%BC%20%EB%A0%88%EB%93%9C%ED%96%A5_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "35,400원",
+    "url": "https://link.coupang.com/a/dB0Yl6"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅[설한정특가] 오형제농원 12brix 명품 부사사과 선물세트, 1박스, 특품 5kg (+가정용포장)",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EC%98%A4%ED%98%95%EC%A0%9C%EB%86%8D%EC%9B%90%20%EC%82%AC%EA%B3%BC%20%EC%84%B8%ED%8A%B8_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "49,500원",
+    "url": "https://link.coupang.com/a/dB0Tke"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅[그린팜 제주] 프리미엄 천혜향 고당도 가정용 명절선물용, 1박스, 3kg대과 프리미엄포장",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EA%B7%B8%EB%A6%B0%ED%8C%9C%EC%A0%9C%EC%A3%BC%20%EC%B2%9C%ED%98%9C%ED%96%A5_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "31,400원",
+    "url": "https://link.coupang.com/a/dB0Q75"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅백화점납품급 혼합 과일 선물 세트",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EB%B0%B1%ED%99%94%EC%A0%90%EB%82%A9%ED%92%88%EA%B8%89%20%ED%98%BC%ED%95%A9%20%EA%B3%BC%EC%9D%BC%20%EC%84%B8%ED%8A%B8_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "46,800원",
+    "url": "https://link.coupang.com/a/dB0Pun"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅시나노골드 사과",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EC%8B%9C%EB%82%98%EB%85%B8%EA%B3%A8%EB%93%9C%20%EC%82%AC%EA%B3%BC_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "19,980원",
+    "url": "https://link.coupang.com/a/dB0NC2"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅하이프루츠 저탄소인증 세척 사과, 2kg(중과, 7~9입), 1박스",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%ED%95%98%EC%9D%B4%ED%94%84%EB%A3%A8%EC%B8%A0%20%EC%84%B8%EC%B2%99%EC%82%AC%EA%B3%BC_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "20,880원",
+    "url": "https://link.coupang.com/a/dB0L5X"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅프레샤인 충주 당도선별 사과",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EC%B6%A9%EC%A3%BC%20%EB%8B%B9%EB%8F%84%EC%84%A0%EB%B3%84%20%EC%82%AC%EA%B3%BC_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "42,240원",
+    "url": "https://link.coupang.com/a/dB0Kl1"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅떡과정 화과자 20구 + 만쥬 10구 선물세트 (냉동), 1세트",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EB%96%A1%EA%B3%BC%EC%A0%95%20%ED%99%94%EA%B3%BC%EC%9E%90_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "42,900원",
+    "url": "https://link.coupang.com/a/dB0IyG"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅스윗쿡 과일앤 사과 배 샤인머스켓 혼합 과일 선물세트 3.5kg",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EC%8A%A4%EC%9C%97%EC%BF%A1%20%ED%98%BC%ED%95%A9%20%EA%B3%BC%EC%9D%BC%20%EC%84%A0%EB%AC%BC%EC%84%B8%ED%8A%B8_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "54,800원",
+    "url": "https://link.coupang.com/a/dB0ESb"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅국내산 제철과일 사과 배 과일 선물세트 특품 5kg",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EA%B5%AD%EB%82%B4%EC%82%B0%20%EC%A0%9C%EC%B2%A0%EA%B3%BC%EC%9D%BC%20%EC%84%A0%EB%AC%BC%EC%84%B8%ED%8A%B8_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "40,900원",
+    "url": "https://link.coupang.com/a/dB0DbI"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅[단하루특가] 고당도 명절 사과 선물세트, 1세트, 하루특가 특품_2.5KG+보자기",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EA%B3%A0%EB%8B%B9%EB%8F%84%20%EC%82%AC%EA%B3%BC%20%EC%84%A0%EB%AC%BC%EC%84%B8%ED%8A%B8_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "57,800원",
+    "url": "https://link.coupang.com/a/dB0AaW"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅고려홍삼중앙회 6년근 고려홍삼정 투데이 골드 스틱 + 쇼핑백, 10ml, 100개",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/6%EB%85%84%EA%B7%BC%20%EA%B3%A0%EB%A0%A4%ED%99%8D%EC%82%BC%EC%A0%95%20%EA%B3%A8%EB%93%9C%20%EC%8A%A4%ED%8B%B1_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "45,900원",
+    "url": "https://link.coupang.com/a/dB0tSS"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅(백화점납품) 설 명절 호두말이 곶감선물세트, 1세트, 명품곶감, 20구, 330g",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%ED%98%B8%EB%91%90%EB%A7%90%EC%9D%B4%20%EA%B3%B6%EA%B0%90%20%EC%84%A0%EB%AC%BC%EC%84%B8%ED%8A%B8_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "31,200원",
+    "url": "https://link.coupang.com/a/dB0rVY"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅스팸 8C호 선물세트 + 쇼핑백, 1세트",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EC%8A%A4%ED%8C%B8_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "29,900원",
+    "url": "https://link.coupang.com/a/dB0o9A"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅[특가행사중] 가락시장 새벽경매 명품 사과배 혼합선물세트 3.5kg(사과4 배4)",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EA%B0%80%EB%9D%BD%EC%8B%9C%EC%9E%A5%20%EC%83%88%EB%B2%BD%EA%B2%BD%EB%A7%A4%20%EA%B3%BC%EC%9D%BC%20%ED%98%BC%ED%95%A9%EC%84%B8%ED%8A%B8_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "40,000원",
+    "url": "https://link.coupang.com/a/dB0m8Q"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅쌩스네이처 히말라야 핑크솔트 바이알 6종 + 우드 트레이 세트",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%ED%9E%88%EB%A7%90%EB%9D%BC%EC%95%BC%20%ED%95%91%ED%81%AC%EC%86%94%ED%8A%B8%20%EC%84%A0%EB%AC%BC%EC%84%B8%ED%8A%B8_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "24,500원",
+    "url": "https://link.coupang.com/a/dB0lvc"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅풍년보감 6년근 고려홍삼정 에브리데이100 60포 세트 + 쇼핑백, 900g, 1세트",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EA%B3%A0%EB%A0%A4%ED%99%8D%EC%82%BC%EC%A0%95%20%EC%97%90%EB%B8%8C%EB%A6%AC%EB%8D%B0%EC%9D%B4%20100_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "24,520원",
+    "url": "https://link.coupang.com/a/dB0gvs"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅광천김 3대째 달인 캔김 혼합 선물세트 12호, 1세트",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EA%B4%91%EC%B2%9C%EA%B9%80%20%EB%8B%AC%EC%9D%B8%20%EA%B3%A0%EA%B8%89%20%EC%84%A0%EB%AC%BC%EC%84%B8%ED%8A%B8%2012%ED%98%B8_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "28,810원",
+    "url": "https://link.coupang.com/a/dB0eRt"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅황제기력 특허성분 침향 고함량 28% 침향환 VIP선물세트 + 쇼핑백, 2박스, 225g",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%ED%99%A9%EC%A0%9C%EA%B8%B0%EB%A0%A5%20%EC%B9%A8%ED%96%A5%ED%99%98_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "99,900원",
+    "url": "https://link.coupang.com/a/dB0cdW"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅화백콜라보 도라지정과 한과 설 추석 명절 선물세트",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EB%8F%84%EB%9D%BC%EC%A7%80%20%EC%A0%95%EA%B3%BC_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "32,720원",
+    "url": "https://link.coupang.com/a/dBZ7nO"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅[15 Brix] 명품 당도선별 한라봉 정품 세트, 당도선별 한라봉 로얄특대 (13~15과) 5kg, 1개",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EB%8B%B9%EB%8F%84%EC%84%A0%EB%B3%84%20%ED%95%9C%EB%9D%BC%EB%B4%89_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "31,610원",
+    "url": "https://link.coupang.com/a/dBZ4Xm"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅[농협안심한우] 따봉프레시 진한국물 황제 보신세트(사골 꼬리반골 우족), 1개, 4kg",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%ED%95%9C%EC%9A%B0%20%ED%99%A9%EC%A0%9C%EB%AA%B8%EB%B3%B4%EC%8B%A0%20%EC%84%B8%ED%8A%B8_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "26,900원",
+    "url": "https://link.coupang.com/a/dBZ2N5"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅종근당건강 홍삼녹용 프리미엄, 30회분, 2박스",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EC%A2%85%EA%B7%BC%EB%8B%B9%20%ED%99%8D%EC%82%BC%EB%85%B9%EC%9A%A9%2050ml%2030%ED%8F%AC%202%EB%B0%95%EC%8A%A4_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "33,800원",
+    "url": "https://link.coupang.com/a/dBZ1jm"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅뉴케어 정품 고칼슘 영양갱 셀렉션 선물세트, 720g, 1개",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EB%89%B4%EC%BC%80%EC%96%B4%20%EA%B3%A0%EC%B9%BC%EC%8A%98%20%EC%98%81%EC%96%91%EA%B0%B1_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "31,360원",
+    "url": "https://link.coupang.com/a/dBZZtx"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅고급 종합전병세트 1.5kgx2박스 셈베이 선물용 과자, 1.5kg, 2개",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EA%B3%A0%EA%B8%89%20%EC%84%BC%EB%B2%A0%EC%9D%B4_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "19,900원",
+    "url": "https://link.coupang.com/a/dBZXFR"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅[상주미소] 명품 반건시 곶감 실속형(선물세트)",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EC%83%81%EC%A3%BC%EA%B3%B6%EA%B0%90_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "18,960원",
+    "url": "https://link.coupang.com/a/dBZV1B"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅수담한과 고급지함1호 예담 2단구성 한과 선물 세트, 1세트, 1kg",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EC%88%98%EB%8B%B4%ED%95%9C%EA%B3%BC%201%ED%98%B8_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "21,900원",
+    "url": "https://link.coupang.com/a/dBZRvV"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅따봉프레시 6 7 8번 꽃갈비 LA갈비 지방손질 된 가정용 선물용, 4kg(가정용), 1개",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%20LA%EA%B0%88%EB%B9%84_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "139,900원",
+    "url": "https://link.coupang.com/a/dBZPOB"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅[품질보장] 제주 천혜향 선물세트 선물용",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EC%A0%9C%EC%A3%BC%20%EC%B2%9C%ED%98%9C%ED%96%A5_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "26,320원",
+    "url": "https://link.coupang.com/a/dBZMrZ"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅밀양한천 양갱 종합 세트 3호 + 쇼핑백, 945g, 1개",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EB%B0%80%EC%96%91%ED%95%9C%EC%B2%9C%20%EB%AA%85%ED%92%88%EC%96%91%EA%B0%B1_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "20,500원",
+    "url": "https://link.coupang.com/a/dBZJHz"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅비타할로 진심을 담은 흑마늘즙, 2.4L, 1개",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EB%B9%84%ED%83%80%ED%95%A0%EB%A1%9C%20%ED%9D%91%EB%A7%88%EB%8A%98%EC%A6%99_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "10,740원",
+    "url": "https://link.coupang.com/a/dBZGuU"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅김소형원방 녹용 산삼 배양근 침향단 + 쇼핑백, 3.75g, 60개",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EA%B9%80%EC%86%8C%ED%98%95%20%EC%B9%A8%ED%96%A5%EB%8B%A8_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "38,500원",
+    "url": "https://link.coupang.com/a/dBZEGl"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅[농협안심한우] 따봉프레시 육즙가득 1++ 구이용 명절 선물세트",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EB%86%8D%ED%98%91%20%EC%95%88%EC%8B%AC%20%ED%95%9C%EC%9A%B0_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "99,900원",
+    "url": "https://link.coupang.com/a/dBZCyP"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅명절 단하루 히말라야 핑크솔트 선물세트 250g x 5팩+그라인더1개 설명절 선물세트",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%ED%9E%88%EB%A7%90%EB%9D%BC%EC%95%BC%20%ED%95%91%ED%81%AC%20%EC%86%8C%EA%B8%88_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "7,900원",
+    "url": "https://link.coupang.com/a/dBZAWQ"
+  },
+  {
+    "category": "선물세트",
+    "name": "[광고]✅[최상급 원물] 제주 선물용 레드향 선물세트",
+    "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/%EC%A0%9C%EC%A3%BC%20%EB%A0%88%EB%93%9C%ED%96%A5%203kg_%EA%B2%B0%EA%B3%BC.webp?raw=true",
+    "price": "24,900원",
+    "url": "https://link.coupang.com/a/dBZxYU"
+  },
+  {
     "category": "헬스/건강식품",
     "name": "[광고]✅리뉴 후레쉬 렌즈 세정액, 120ml, 3개",
     "image": "https://github.com/kainosworship/coupang-guide-images/blob/main/p023%EA%B3%BC.webp?raw=true",
